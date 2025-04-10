@@ -45,6 +45,33 @@
     animation: fadeIn 1.2s ease-out 0.5s forwards; /* Fade-in animation with slight delay */
 }
 
+  /* Video Card Styling */
+  .video-card {
+    max-width: 1000px;
+    height: 600px;
+    padding: 20px;
+    margin: 40px auto 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0152a8af; /* Light gray background for contrast */
+  }
+  
+  /* Style for YouTube iframe */
+  .video-card iframe {
+    border-radius: 12px;
+  }
+  
+  /* Hover effects for the title and description */
+  .hero-title-wrapper .color-white h1:hover {
+    transform: translate3d(0, -10px, 0);
+  }
+  
+  .hero-description-wrap .text-xl:hover {
+    transform: translate3d(0, -5px, 0);
+  }
+  
+
 /* Media Queries for Smaller Screens (e.g., Phones) */
 @media screen and (max-width: 767px) {
     /* Adjust hero title font size for small screens */
@@ -58,6 +85,17 @@
         max-width: 90%;
         font-size: 1rem; /* Smaller size for phones */
     }
+
+    .video-card {
+        max-width: 90%;
+        height: 300px;
+        padding: 20px;
+        margin: 40px auto 0;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #0152a8af; /* Light gray background for contrast */
+      }
 }
 
   
@@ -83,30 +121,5 @@
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
-  }
-  
-  /* Video Card Styling */
-  .video-card {
-    max-width: 800px;
-    padding: 20px;
-    margin: 40px auto 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #0152a8af; /* Light gray background for contrast */
-  }
-  
-  /* Style for YouTube iframe */
-  .video-card iframe {
-    border-radius: 12px;
-  }
-  
-  /* Hover effects for the title and description */
-  .hero-title-wrapper .color-white h1:hover {
-    transform: translate3d(0, -10px, 0);
-  }
-  
-  .hero-description-wrap .text-xl:hover {
-    transform: translate3d(0, -5px, 0);
   }
   
