@@ -1,0 +1,60 @@
+.brand-section {
+    padding: 30px 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .brand-title-wrap {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .brand-title-wrap h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .brand-slider {
+    overflow: hidden;
+    width: 100vw;
+    position: relative;
+  }
+  
+  .brand-track {
+    display: flex;
+    gap: 100px; /* Increase spacing between logos */
+    animation: scroll 40s linear infinite;
+    width: max-content;
+  }
+  
+  .brand-track img {
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
+  /* Animation: Moves logos left */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .brand-track {
+        display: flex;
+        gap: 30px; /* Increase spacing between logos */
+        animation: scroll 40s linear infinite;
+        width: max-content;
+    }
+
+    .brand-track img {
+        height: 20px;
+    }
+
+  }
+  

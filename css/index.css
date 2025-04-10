@@ -7,6 +7,8 @@
     background-color: var(--secondary-color);
     font-size: 16px;
 
+    background-color: #DFDBE5;
+    background-image: url('../static/photos/course.svg');
 }
 
 body {
@@ -46,18 +48,8 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-
-.flex-1 {
-    flex: 1;
-}
-
-.flex-3 {
-    flex: 3;
-}
-
 .content-container {
     flex: 1;
-    max-width: 1024px;
     margin: 0 auto;
     width: 100%;
     display: flex;
@@ -65,46 +57,6 @@ h2 {
     min-height: 92vh; /* Same as your .content */
 }
 
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 75px;
-    min-width: 400px;
-    position: fixed;
-    width: 100%;
-    flex-wrap: wrap;
-    z-index: 999;
-    background-color: var(--primary-color);
-}
-
-.navbar .logo {
-    display: flex;
-    justify-content: center;
-    background-color: var(--primary-color);
-}
-
-.navbar .logo img {
-    height: 75px;
-    padding: 0.5rem;
-    cursor: pointer;
-}
-
-.navbar .nav-links {
-    display: flex;
-    gap: 2rem;
-    color: var(--secondary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-wrap-mode: nowrap;
-
-    :hover {
-        color: var(--third-color);
-        transition: all 0.3s ease;
-    }
-}
 
 #container-home {
     display: flex;
@@ -137,17 +89,6 @@ h2 {
     z-index: 1; /* Place between content layers */
 }
 
-.navbar .nav-links button {
-    background-color: transparent;
-    color: var(--secondary-color);
-    font-family: 'Inter';
-    border: none;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
 .footer {
     display: flex;
     justify-content: center;
@@ -156,35 +97,6 @@ h2 {
     background-color: var(--secondary-color);
 }
 
-
-.container-svg {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    flex: 1; /* Take up available space - pushes footer down */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-svg .image {
-    max-width: 100%; 
-    z-index: -1; /* Negative but not too low */
-    position: relative; /* Ensure position is set */
-}
-
-.video-container {
-    position: absolute;
-    width: 100%;
-    max-width: 1024px;
-    z-index: 10; /* Higher than image */
-}
-
-.video-container iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3/2;
-}
 
 a {
     text-decoration: none;
@@ -288,19 +200,6 @@ b {
 
 }
 
-
-.mobile-logo {
-    display: none;
-}
-
-.mobile-logo img {
-    height: 100px;
-    background-color: var(--primary-color);
-    max-width: 100%;
-    padding: 1rem;
-    cursor: pointer;
-}
-
 .container-footer {
     display: flex;
     justify-content: center;
@@ -324,28 +223,21 @@ b {
     padding: 1rem;
     font-weight: 500;
     text-align: center;
+}
+
+.container-footer-alt p {
     display: flex;
+    align-items: center; /* Vertically align the text and image */
     justify-content: center;
+    margin: 0;
 }
 
-/* Use one consistent footer style */
-.container-footer-alt {
-    position: relative;
-    width: 100%;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 1rem;
-    text-align: center;
-    margin-top: auto; /* Push to bottom */
+.container-footer-alt a {
+    margin-left: 10px; /* Add space between the text and the image */
 }
 
-/* For full-width effect */
-.container-footer-alt {
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    width: 100vw;
+.container-footer-alt img {
+    vertical-align: middle; /* Ensure the image aligns with the middle of the text */
 }
 
 #container-home .container-footer-alt {
@@ -353,47 +245,6 @@ b {
 }
 
 @media (max-width: 575.98px) {
-    .navbar {
-        margin-top: -1rem;
-    }
-
-    .mobile-logo {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--primary-color);
-        display: block;
-    }
-
-    .mobile-logo img {
-        width: 100%;
-    }
-
-
-    .navbar .flex-1 .logo {
-        display: none;
-    }
-
-    .flex-1 {
-        display: none;
-    }
-
-    .video-container {
-        max-width: 350px;
-        transform: translate(0%, 5%);
-    }
-
-
-
-    .container-svg {
-        min-height: 300px;
-    }
-
-    .container-svg .image {
-        transform: scale(2.7); 
-    }    
-
     .courses-image-container {
         display: none;
     }
@@ -405,59 +256,7 @@ b {
 
 }
 
-
-
-
-
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
-    
-
-    .mobile-logo {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        background: var(--primary-color);
-    }
-
-
-    .video-container {
-        transform: translate(0%, -5%);
-        max-width: 470px;
-    }
-
-    .container-svg {
-        min-height: 400px;
-    }
-
-
-    .mobile-logo img {
-        width: 50%;
-    }
-
-    .navbar {
-        margin-top: -1rem;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .flex-1 {
-        display: none;
-    }
-
-    .navbar .nav-links {
-        gap: 1rem;
-    }
-
-    .navbar .flex-1 .logo {
-        display: none;
-    }
-
-    .container-svg .image {
-        transform: scale(3.6); 
-    }    
-
     .courses-image-container {
         display: none;
     }
@@ -471,19 +270,6 @@ b {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-    .video-container {
-        transform: translate(0%, -5%);
-        max-width: 530px;
-    }
-
-    .container-svg {
-        min-height: 500px;
-    }
-
-    .container-svg .image {
-        transform: scale(4); 
-    }    
-
     .courses-image-container {
         display: none;
     }
@@ -495,20 +281,7 @@ b {
 
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {
-    .video-container {
-        transform: translate(0%, -5%);
-        max-width: 530px;
-    }
-
-    .container-svg {
-        min-height: 700px;
-    }
-
-
-    .container-svg .image {
-        transform: scale(4); 
-    }    
+@media screen and (min-width: 992px) and (max-width: 1199.98px) { 
 
     .courses-image-container {
         display: none;
@@ -522,8 +295,6 @@ b {
 }   
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-
-
     .courses-image-container {
         display: none;
     }
@@ -532,39 +303,12 @@ b {
         display: none;
     }
 
-    .video-container {
-        transform: translate(0%, -5%);
-        max-width: 530px;
-    }
-
-    .container-svg {
-        min-height: 700px;
-    }
-
-    .container-svg .image {
-        transform: scale(4); 
-    }    
-
 }
 
 @media (min-width: 1400px) and (max-width: 1599.98px) {
-    .video-container {
-        transform: translate(0%, -5%);
-        max-width: 530px;
-    }
-
-    .container-svg {
-        min-height: 700px;
-    }
-
     .container-text { 
         margin-top: 0; /* Change from -10rem */
     }
-
-
-    .container-svg .image {
-        transform: scale(4); 
-    }    
 
 }
 
@@ -574,17 +318,9 @@ b {
         margin-top: 0;
     }
     
-    .video-container {
-        transform: translate(0%, -5%);
-        max-width: 530px;
-    }
-
-    .container-svg {
-        min-height: 700px;
-    }
-
-    .container-svg .image {
-        transform: scale(4); 
-    }    
 }
 
+
+  
+  
+  

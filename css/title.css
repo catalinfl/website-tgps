@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'PlusJakartaSans';
+    src: url('../static/fonts/PlusJakartaSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Hero Title Wrapper */
+.hero-title-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-title-wrapper h1 {
+    font-family: 'PlusJakartaSans', sans-serif;
+    color: #000000;
+    font-size: 4rem;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+    max-width: 60%;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0); /* Initial position below */
+    animation: slideIn 1s ease-out forwards; /* Slide-in animation */
+}
+
+/* Subtitle text (description) */
+.hero-description-wrap .text-xl {
+    font-family: 'PlusJakartaSans', sans-serif;
+    color: #1b1b1b;
+    font-size: 1.25rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0); /* Initial position below */
+    animation: fadeIn 1.2s ease-out 0.5s forwards; /* Fade-in animation with slight delay */
+}
+
+/* Media Queries for Smaller Screens (e.g., Phones) */
+@media screen and (max-width: 767px) {
+    /* Adjust hero title font size for small screens */
+    .hero-title-wrapper h1 {
+        max-width: 90%;
+        font-size: 2.5rem; /* Smaller size for phones */
+    }
+
+    /* Adjust subtitle text size for small screens */
+    .hero-description-wrap .text-xl {
+        max-width: 90%;
+        font-size: 1rem; /* Smaller size for phones */
+    }
+}
+
+  
+  /* Animation for title */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  /* Animation for subtitle (description) */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  /* Video Card Styling */
+  .video-card {
+    max-width: 800px;
+    padding: 20px;
+    margin: 40px auto 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0152a8af; /* Light gray background for contrast */
+  }
+  
+  /* Style for YouTube iframe */
+  .video-card iframe {
+    border-radius: 12px;
+  }
+  
+  /* Hover effects for the title and description */
+  .hero-title-wrapper .color-white h1:hover {
+    transform: translate3d(0, -10px, 0);
+  }
+  
+  .hero-description-wrap .text-xl:hover {
+    transform: translate3d(0, -5px, 0);
+  }
+  
